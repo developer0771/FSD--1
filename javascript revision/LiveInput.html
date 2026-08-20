@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="greet"> </p>
+    <script>
+        const inputField = document.getElementById("inputField");
+        const greet = document.getElementById("greet");
+
+        inputField.addEventListener("input", () => {
+            greet.textContent = `Hello, ${inputField.value}!`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+</head>
+<body>
+
+    <button onclick="runCode3()">Run Code 3</button>
+
+    <p id="demoText">
+        This Text will change when the button is clicked.
+    </p>
+
+    <h2>Event Example</h2>
+
+    <button onclick="setupEvent()">Setup Event (Run Once)</button>
+    <button id="eventButton">Click Me!</button>
+
+    <script>
+        function runCode3() {
+            document.getElementById("demoText").innerText =
+                "The text has changed!";
+
+            document.getElementById("demoText").style.color = "blue";
+        }
+
+        function setupEvent() {
+            let button = document.getElementById("eventButton");
+
+            button.addEventListener("click", function () {
+                alert("Button Clicked!");
+            });
+        }
+    </script>
+
+</body>
+</html>

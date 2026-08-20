@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Example</title>
+</head>
+<body>
+
+    <h2>Function Example</h2>
+
+    <button onclick="runCode5()">Run Code</button>
+
+    <p id="result5"></p>
+
+    <script>
+        function runCode5() {
+
+            function addNumbers(x, y) {
+                return x + y;
+            }
+
+            let sum = addNumbers(5, 7);
+            document.getElementById("result5").innerText = "The sum: " + sum;
+        }
+    </script>
+
+</body>
+</html>
