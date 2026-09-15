@@ -1,0 +1,353 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Limited Company</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        /* Header */
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 18px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #bfdbfe;
+        }
+
+        /* Main Section */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            font-size: 36px;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .heading p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* Table Container */
+        .table-container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid #1e3a8a;
+        }
+
+        th {
+            background: #1e3a8a;
+            color: white;
+            padding: 16px;
+            font-size: 17px;
+            border: 1px solid #cbd5e1;
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            font-size: 16px;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tr:hover {
+            background: #eff6ff;
+            transition: 0.3s;
+        }
+
+        /* Book Badge */
+        .book-number {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e3a8a;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Price */
+        .price {
+            font-weight: bold;
+            color: #15803d;
+            font-size: 17px;
+        }
+
+        /* Add to Cart Button */
+        .cart-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cart-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            margin-top: 60px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .location:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .heading h1 {
+                font-size: 28px;
+            }
+
+            .table-container {
+                padding: 12px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <div class="logo-icon">ABC</div>
+            <span>ABC Limited Company</span>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Subject</a>
+            <a href="#">Payment</a>
+            <a href="#">Login</a>
+        </nav>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="heading">
+            <h1>Available Books</h1>
+            <p>Choose your favorite subject books and add them to your cart.</p>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <tr>
+                    <th>S.No</th>
+                    <th>Subject</th>
+                    <th>Price</th>
+                    <th>Book</th>
+                    <th>Add to Cart</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td><strong>Physics</strong></td>
+                    <td class="price">₹350</td>
+                    <td><span class="book-number">Book 1</span></td>
+                    <td>
+                        <button class="cart-btn" onclick="addToCart('Physics')">
+                            🛒 Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td><strong>Chemistry</strong></td>
+                    <td class="price">₹450</td>
+                    <td><span class="book-number">Book 2</span></td>
+                    <td>
+                        <button class="cart-btn" onclick="addToCart('Chemistry')">
+                            🛒 Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td><strong>Biology</strong></td>
+                    <td class="price">₹200</td>
+                    <td><span class="book-number">Book 3</span></td>
+                    <td>
+                        <button class="cart-btn" onclick="addToCart('Biology')">
+                            🛒 Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td><strong>Maths</strong></td>
+                    <td class="price">₹300</td>
+                    <td><span class="book-number">Book 4</span></td>
+                    <td>
+                        <button class="cart-btn" onclick="addToCart('Maths')">
+                            🛒 Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td><strong>English</strong></td>
+                    <td class="price">₹400</td>
+                    <td><span class="book-number">Book 5</span></td>
+                    <td>
+                        <button class="cart-btn" onclick="addToCart('English')">
+                            🛒 Add to Cart
+                        </button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            🔷 ABC Limited Company
+        </div>
+
+        <p>
+            © 2026 ABC Limited Company. All Rights Reserved.
+        </p>
+
+        <br>
+
+        <a class="location"
+           href="https://maps.google.com"
+           target="_blank">
+            📍 Location — Google Maps
+        </a>
+
+    </footer>
+
+    <script>
+        function addToCart(subject) {
+            alert(subject + " has been added to your cart!");
+        }
+    </script>
+
+</body>
+</html>
+
